@@ -1,0 +1,111 @@
+.wrap {
+    flex-wrap: wrap;
+}
+.block {
+    display: block;
+}
+
+.flex-row {
+    display: flex;
+    flex-direction: row;
+}
+
+.flex-column {
+  display: flex;
+  flex-direction: column;
+}
+
+.justify-start {
+  justify-content: flex-start;
+}
+
+.justify-end {
+  justify-content: flex-end;
+}
+
+.justify-between {
+  justify-content: space-between;
+}
+
+.justify-center {
+  justify-content: center;
+}
+
+.align-start {
+  align-items: flex-start;
+}
+
+.align-end {
+  align-items: flex-end;
+}
+
+.align-center {
+  align-items: center;
+}
+
+.rest {
+  flex: 1;
+}
+
+button:after {
+  padding: 0;
+  margin: 0;
+}
+
+li {
+  list-style: none;
+}
+
+.ellipsis {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.ellipsis-two {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  overflow: hidden;
+  /* autoprefixer: ignore next */
+  -webkit-box-orient: vertical;
+}
+
+body {
+  word-break: break-all; //重要别删！
+  font-family:'Helvetica Neue','思源黑体',Arial,'微软雅黑';
+  background: #F8F9FA;
+  font-size: 16px;
+}
+
+//统一输入框字体样式
+@mixin input-style {
+  color: #000000 !important;
+  font-size: 16px !important;
+  font-family:'Helvetica Neue','思源黑体',Arial,'微软雅黑';
+}
+input{
+  @include input-style;
+}
+.el-textarea{
+  /deep/.el-textarea__inner{
+    @include input-style;
+  }
+}
+.input{
+  /deep/.el-input__inner{
+    @include input-style;
+  }
+}
+
+//统一输入框的placeholder字体
+input::-webkit-input-placeholder{
+  color: #888888 !important;
+}
+textarea::-webkit-input-placeholder{
+  color: #888888 !important;
+}
+button:focus{
+  outline: none;
+}
